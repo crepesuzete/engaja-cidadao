@@ -1,4 +1,3 @@
-
 import { Issue, IssueCategory, IssueStatus, Mission, Reward, User, UserRole, Notification, EmergencyAlert, Poll, Councilor, LegislativeBill } from './types';
 
 // Mock Notifications

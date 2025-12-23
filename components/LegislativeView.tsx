@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { Councilor, LegislativeBill, BillStatus, UserRole } from '../types';
@@ -6,6 +7,11 @@ import { Landmark, Vote, User, ThumbsUp, ThumbsDown, FileText, ChevronRight, Mai
 =======
 import { Landmark, Vote, User, ThumbsUp, ThumbsDown, FileText, ChevronRight, Mail, ArrowRight, Building2, ScrollText, CheckCircle2, XCircle, Pencil, X, Save, Plus, Lock } from 'lucide-react';
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+import React, { useState } from 'react';
+import { Councilor, LegislativeBill, BillStatus, UserRole } from '../types';
+import { Landmark, Vote, User, ThumbsUp, ThumbsDown, FileText, ChevronRight, Mail, Building2, ScrollText, CheckCircle2, XCircle, Pencil, X, Save, Plus, Trash2 } from 'lucide-react';
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
 
 interface LegislativeViewProps {
   councilors: Councilor[];
@@ -16,9 +22,13 @@ interface LegislativeViewProps {
   onUpdateCouncilor?: (councilor: Councilor) => void;
   onAddCouncilor?: (councilor: Councilor) => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onDeleteCouncilor?: (id: string) => void; // New delete handler
 =======
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+  onDeleteCouncilor?: (id: string) => void; // New delete handler
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
 }
 
 const LegislativeView: React.FC<LegislativeViewProps> = ({ 
@@ -29,11 +39,16 @@ const LegislativeView: React.FC<LegislativeViewProps> = ({
   onUpdateBill,
   onUpdateCouncilor,
 <<<<<<< HEAD
+<<<<<<< HEAD
   onAddCouncilor,
   onDeleteCouncilor
 =======
   onAddCouncilor
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+  onAddCouncilor,
+  onDeleteCouncilor
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
 }) => {
   const [activeTab, setActiveTab] = useState<'BILLS' | 'COUNCILORS'>('BILLS');
   
@@ -279,11 +294,16 @@ const LegislativeView: React.FC<LegislativeViewProps> = ({
                            <button 
                              onClick={() => setEditingCouncilor(councilor)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                              className="absolute top-2 right-2 p-2 bg-slate-100 text-slate-500 rounded-full hover:bg-indigo-100 hover:text-indigo-600 transition-colors"
                              title="Editar Vereador"
 =======
                              className="absolute top-2 right-2 p-2 bg-slate-100 text-slate-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-indigo-100 hover:text-indigo-600"
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+                             className="absolute top-2 right-2 p-2 bg-slate-100 text-slate-500 rounded-full hover:bg-indigo-100 hover:text-indigo-600 transition-colors"
+                             title="Editar Vereador"
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
                            >
                              <Pencil className="w-4 h-4" />
                            </button>
@@ -443,6 +463,9 @@ const LegislativeView: React.FC<LegislativeViewProps> = ({
                         <Save className="w-4 h-4" /> {editingCouncilor.id ? 'Salvar Perfil' : 'Cadastrar Vereador'}
                       </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
 
                       {/* DELETE BUTTON (Only if editing existing) */}
                       {editingCouncilor.id && onDeleteCouncilor && (
@@ -457,8 +480,11 @@ const LegislativeView: React.FC<LegislativeViewProps> = ({
                             <Trash2 className="w-4 h-4" /> Excluir Vereador
                          </button>
                       )}
+<<<<<<< HEAD
 =======
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
                   </form>
                 </div>
             </div>
@@ -470,4 +496,8 @@ const LegislativeView: React.FC<LegislativeViewProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default LegislativeView;
+=======
+export default LegislativeView;
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
