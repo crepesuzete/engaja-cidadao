@@ -51,7 +51,6 @@ export interface Issue {
   category: IssueCategory;
   status: IssueStatus;
   votes: number;
-  // Updated location to optional lat/lng for real map support
   location: { 
     x?: number; 
     y?: number; 
@@ -59,21 +58,19 @@ export interface Issue {
     lng?: number; 
     label: string 
   };
-  // Replaced single imageUrl with attachments array
   imageUrl?: string; // Kept for backward compatibility
   attachments: Attachment[]; // NEW: Multi-media support
   
   authorId: string;
-  authorName: string; // Added to store snapshot of name (or anonymous alias)
-  authorAvatar: string; // Added to store snapshot of avatar (or anonymous icon)
-  isAnonymous: boolean; // New Protection Flag
+  authorName: string; 
+  authorAvatar: string; 
+  isAnonymous: boolean; 
   createdAt: Date;
-  aiAnalysis?: string; // Analysis from Gemini
-  comments: Comment[]; // New: Community discussion
-  supportedBy: string[]; // New: List of user IDs who supported/upvoted
+  aiAnalysis?: string; 
+  comments: Comment[]; 
+  supportedBy: string[]; 
   
-  // Integrity & Moderation
-  flaggedBy: string[]; // List of user IDs who reported this issue as fake/abusive
+  flaggedBy: string[]; 
   moderationStatus: 'APPROVED' | 'UNDER_REVIEW' | 'REJECTED';
 }
 
@@ -95,12 +92,11 @@ export interface Reward {
   image: string;
 }
 
-// New Interfaces for Gamification & Profile
 export interface Badge {
   id: string;
   name: string;
   description: string;
-  icon: string; // Icon name or emoji
+  icon: string; 
   unlocked: boolean;
   unlockedAt?: Date;
 }
@@ -129,24 +125,22 @@ export interface User {
   level: number;
   role: UserRole;
   avatar: string;
-  badges: Badge[]; // Added badges
-  recentActivity: ActivityLog[]; // Added history
-  department?: string; // For Executive
-  party?: string; // For Legislative
+  badges: Badge[]; 
+  recentActivity: ActivityLog[]; 
+  department?: string; 
+  party?: string; 
 }
 
-// NEW: Emergency Alerts
 export interface EmergencyAlert {
   id: string;
   level: 'INFO' | 'WARNING' | 'CRITICAL';
   title: string;
   message: string;
-  contactInfo?: string; // New field for emergency phone (e.g., "199")
+  contactInfo?: string; 
   active: boolean;
   createdAt: Date;
 }
 
-// NEW: Public Polls
 export interface PollOption {
   id: string;
   text: string;
@@ -159,11 +153,10 @@ export interface Poll {
   options: PollOption[];
   totalVotes: number;
   active: boolean;
-  points: number; // Points for voting
-  userHasVoted?: boolean; // Local state check
+  points: number; 
+  userHasVoted?: boolean; 
 }
 
-// --- LEGISLATIVE MODULE ---
 export interface Councilor {
   id: string;
   name: string;
@@ -173,23 +166,22 @@ export interface Councilor {
   email: string;
 }
 
-// UPDATE: Expanded Status for Flow Visualization
 export type BillStatus = 
-  | 'EM_VOTACAO'        // Na Câmara
-  | 'AGUARDANDO_SANCAO' // Enviado ao Executivo
-  | 'APROVADO'          // Sancionado (Lei)
-  | 'VETADO';           // Vetado pelo Prefeito
+  | 'EM_VOTACAO'        
+  | 'AGUARDANDO_SANCAO' 
+  | 'APROVADO'          
+  | 'VETADO';           
 
 export interface LegislativeBill {
   id: string;
-  code: string; // e.g., PL 123/2024
+  code: string; 
   title: string;
   description: string;
-  author: string; // Councilor Name or Executive
+  author: string; 
   status: BillStatus;
   poll: {
     votesFavor: number;
     votesAgainst: number;
-    userVote?: 'FAVOR' | 'AGAINST'; // Local state
+    userVote?: 'FAVOR' | 'AGAINST'; 
   };
 }
