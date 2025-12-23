@@ -1,6 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
 // --- CONFIGURAÇÃO DO SUPABASE ---
+<<<<<<< HEAD
 
 // 1. URL DO SEU PROJETO (Já detectada do seu print)
 const SUPABASE_URL = 'https://pixtdusltmbuvkgcigcd.supabase.co'; 
@@ -14,6 +15,26 @@ export const isSupabaseConnected = SUPABASE_KEY.length > 20;
 
 // Inicializa o cliente apenas se a chave estiver presente
 export const supabase = isSupabaseConnected 
+=======
+// ID do Projeto e Chave Pública
+const SUPABASE_URL = 'https://pixtdusltmbuvkgcigcd.supabase.co'; 
+
+// ATENÇÃO: Esta é uma chave de exemplo (PLACEHOLDER).
+// Para o upload funcionar, você deve colocar SUA chave do projeto Supabase aqui.
+const SUPABASE_KEY = 'sb_publishable_n5KKRFHtQOXtt6z1NZoNoA_ff-fZdUZ';
+
+// Verificação de segurança: 
+// Só ativa o Supabase se a chave existir E NÃO FOR a chave de exemplo padrão.
+// Isso previne que o app "trave" tentando conectar com credenciais inválidas.
+const isConfigured = 
+  SUPABASE_KEY && 
+  SUPABASE_KEY.length > 10 && 
+  SUPABASE_KEY !== 'sb_publishable_n5KKRFHtQOXtt6z1NZoNoA_ff-fZdUZ';
+
+// Se não estiver configurado corretamente, exporta null.
+// O App entrará automaticamente em "Modo Demo" (salvando imagens apenas no navegador).
+export const supabase = isConfigured 
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
   ? createClient(SUPABASE_URL, SUPABASE_KEY) 
   : null;
 
@@ -23,7 +44,11 @@ export const supabase = isSupabaseConnected
  */
 export const uploadAttachment = async (file: File, path: string) => {
   if (!supabase) {
+<<<<<<< HEAD
     console.warn("Upload pulado: Modo Demo (sem Supabase).");
+=======
+    console.warn("Upload pulado: Supabase não configurado ou chave inválida. Salvando localmente.");
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
     return null;
   }
 

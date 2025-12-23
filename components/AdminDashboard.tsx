@@ -1,7 +1,11 @@
 import React from 'react';
 import { Issue, IssueStatus, IssueCategory } from '../types';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+<<<<<<< HEAD
 import { AlertTriangle, CheckCircle, Clock, Users, Download, Printer, FileText, Paperclip, Radio } from 'lucide-react';
+=======
+import { AlertTriangle, CheckCircle, Clock, Users, Download, Printer, FileText, Paperclip } from 'lucide-react';
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
 
 interface AdminDashboardProps {
   issues: Issue[];
@@ -72,6 +76,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ issues }) => {
     <div className="p-6 space-y-8 animate-fade-in print:p-0">
       <header className="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
+<<<<<<< HEAD
            <div className="flex items-center gap-3">
              <h2 className="text-3xl font-bold text-slate-800">Painel de Gestão Urbana</h2>
              {/* LIVE INDICATOR */}
@@ -80,6 +85,9 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ issues }) => {
                <span className="text-[10px] font-bold uppercase tracking-wide">Ao Vivo</span>
              </div>
            </div>
+=======
+           <h2 className="text-3xl font-bold text-slate-800">Painel de Gestão Urbana</h2>
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
            <p className="text-slate-500">Visão geral das demandas da cidade em tempo real.</p>
         </div>
         
@@ -202,8 +210,13 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ issues }) => {
           <span className="text-xs text-slate-400 no-print">Visualizando 5 mais recentes</span>
         </div>
         <ul>
+<<<<<<< HEAD
           {issues.slice(0, 10).map((issue, index) => (
             <li key={issue.id} className={`p-4 border-b border-slate-50 last:border-0 hover:bg-slate-50 transition-colors flex justify-between items-center print:border-slate-200 ${index === 0 ? 'bg-emerald-50/30' : ''}`}>
+=======
+          {issues.slice(0, 10).map(issue => (
+            <li key={issue.id} className="p-4 border-b border-slate-50 last:border-0 hover:bg-slate-50 transition-colors flex justify-between items-center print:border-slate-200">
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
               <div className="flex-1 min-w-0 pr-4">
                 <span className="text-xs font-semibold px-2 py-1 rounded bg-slate-100 text-slate-600 mb-1 inline-block print:border print:border-slate-300">
                   {issue.category}
@@ -215,10 +228,13 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ issues }) => {
                         <Paperclip className="w-3 h-3" /> {issue.attachments.length}
                       </span>
                    )}
+<<<<<<< HEAD
                    {/* NEW BADGE */}
                    {index === 0 && (
                      <span className="text-[9px] bg-red-500 text-white px-1.5 py-0.5 rounded-sm font-bold animate-pulse">NOVO</span>
                    )}
+=======
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
                 </div>
                 <p className="text-sm text-slate-500 truncate max-w-md print:whitespace-normal">{issue.description}</p>
                 <span className="text-[10px] text-slate-400 mt-1 block">ID: {issue.id} • {new Date(issue.createdAt).toLocaleDateString()}</span>

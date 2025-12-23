@@ -3,7 +3,11 @@ import { Issue, IssueCategory, IssueStatus } from '../types';
 import { 
   Plus, Loader2, 
   Construction, Stethoscope, GraduationCap, TreePine, 
+<<<<<<< HEAD
   ShieldAlert, Bus, Theater, Users, LayoutGrid, CheckCircle2, AlertCircle, Filter, Play 
+=======
+  ShieldAlert, Bus, Theater, Users, LayoutGrid, CheckCircle2, AlertCircle, Filter 
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
 } from 'lucide-react';
 
 // Declaration for Leaflet attached to window via CDN
@@ -223,15 +227,19 @@ const MapView: React.FC<MapViewProps> = ({
       const colorHex = issue.status === IssueStatus.RESOLVIDA ? '#10b981' : 
                        issue.status === IssueStatus.ANALISE ? '#f59e0b' : '#ef4444';
 
+<<<<<<< HEAD
       // Check for Video Response
       const hasVideo = issue.comments.some(c => c.isOfficial && c.videoUrl);
 
+=======
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
       // Get Icon based on Category (Normalized Check)
       const categoryIconSVG = getCategoryIconSVG(issue.category);
 
       // Custom Icon HTML
       const iconHtml = `
         <div class="relative group cursor-pointer">
+<<<<<<< HEAD
            <div class="w-10 h-10 ${colorClass} rounded-full border-[3px] border-white shadow-xl flex items-center justify-center transform transition-transform duration-300 hover:scale-110 hover:-translate-y-1 relative">
               ${categoryIconSVG}
               ${hasVideo ? `
@@ -239,6 +247,10 @@ const MapView: React.FC<MapViewProps> = ({
                   <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                 </div>
               ` : ''}
+=======
+           <div class="w-10 h-10 ${colorClass} rounded-full border-[3px] border-white shadow-xl flex items-center justify-center transform transition-transform duration-300 hover:scale-110 hover:-translate-y-1">
+              ${categoryIconSVG}
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
            </div>
            <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 ${colorClass} rotate-45 border-r border-b border-white"></div>
         </div>
@@ -261,7 +273,11 @@ const MapView: React.FC<MapViewProps> = ({
                  <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wide flex items-center gap-1">
                     ${issue.category}
                  </span>
+<<<<<<< HEAD
                  ${hasVideo ? '<span class="text-[9px] bg-indigo-100 text-indigo-700 px-1 rounded font-bold border border-indigo-200">VÍDEO RESPOSTA</span>' : ''}
+=======
+                 <span class="text-[9px] bg-slate-100 text-slate-500 px-1 rounded">Arraste para mover</span>
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
               </div>
               <h3 class="text-sm font-bold text-slate-800 leading-snug mb-2">${issue.title}</h3>
               <p class="text-xs text-slate-500 line-clamp-2 mb-3 leading-relaxed">${issue.description}</p>

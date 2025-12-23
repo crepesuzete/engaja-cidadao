@@ -4,6 +4,7 @@ import { Issue, IssueCategory, IssueStatus } from '../types';
 // Se o Supabase estiver configurado, usamos ele. Se não, usamos LocalStorage (Modo Demo)
 const isLive = !!supabase;
 
+<<<<<<< HEAD
 // Helper para converter linha do Banco de Dados para o objeto Issue do App
 export const parseIssueFromDB = (row: any): Issue => ({
   id: row.id,
@@ -26,6 +27,8 @@ export const parseIssueFromDB = (row: any): Issue => ({
   moderationStatus: row.moderation_status || 'APPROVED'
 });
 
+=======
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
 export const dataService = {
   
   // --- BUSCAR ISSUES ---
@@ -46,7 +49,31 @@ export const dataService = {
       return [];
     }
 
+<<<<<<< HEAD
     return data.map(parseIssueFromDB);
+=======
+    // Mapear do formato Banco de Dados (snake_case) para o App (camelCase)
+    return data.map((row: any) => ({
+      id: row.id,
+      title: row.title,
+      description: row.description,
+      category: row.category as IssueCategory,
+      status: row.status as IssueStatus,
+      votes: row.votes,
+      location: row.location || { label: 'Local Desconhecido' },
+      authorId: row.author_id,
+      authorName: row.author_name || 'Anônimo',
+      authorAvatar: row.author_avatar,
+      isAnonymous: row.is_anonymous,
+      createdAt: new Date(row.created_at),
+      attachments: row.attachments || [],
+      aiAnalysis: row.ai_analysis,
+      comments: row.comments || [],
+      supportedBy: row.supported_by || [],
+      flaggedBy: row.flagged_by || [],
+      moderationStatus: row.moderation_status || 'APPROVED'
+    }));
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
   },
 
   // --- CRIAR ISSUE ---
@@ -79,6 +106,7 @@ export const dataService = {
       console.error("Erro ao salvar no Supabase:", error);
       throw error;
     }
+<<<<<<< HEAD
   },
 
   // --- ATUALIZAR ISSUE ---
@@ -135,5 +163,7 @@ export const dataService = {
         (payload) => onChange(payload)
       )
       .subscribe();
+=======
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
   }
 };

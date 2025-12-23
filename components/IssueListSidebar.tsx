@@ -30,6 +30,7 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
     return issue.comments.find(c => c.isOfficial);
   };
 
+<<<<<<< HEAD
   // Updated handler to open media
   const handlePlayMedia = (url: string | undefined, type: 'audio' | 'video', e: React.MouseEvent) => {
     e.stopPropagation();
@@ -38,6 +39,12 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
     } else {
         alert(`Nenhuma mídia anexada a esta resposta.`);
     }
+=======
+  // Mock function to simulate playing media
+  const handlePlayMedia = (type: 'audio' | 'video', e: React.MouseEvent) => {
+    e.stopPropagation();
+    alert(`Abrindo player de ${type === 'audio' ? 'áudio' : 'vídeo'}... (Funcionalidade demonstrativa)`);
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
   };
 
   if (!isOpen) {
@@ -131,6 +138,7 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
                           </p>
                           
                           {/* MULTIMEDIA BUTTONS */}
+<<<<<<< HEAD
                           <div className="mt-3 flex gap-2 flex-wrap">
                              {officialResponse?.audioUrl && (
                                <button 
@@ -151,6 +159,23 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
                                   VER VÍDEO DO PREFEITO
                                </button>
                              )}
+=======
+                          <div className="mt-3 flex gap-2">
+                             <button 
+                               onClick={(e) => handlePlayMedia('audio', e)}
+                               className="flex items-center gap-1.5 text-[10px] font-bold bg-black/20 hover:bg-black/30 text-white px-2.5 py-1.5 rounded-lg transition-colors"
+                             >
+                                <Volume2 className="w-3 h-3" />
+                                Ouvir Mensagem
+                             </button>
+                             <button 
+                               onClick={(e) => handlePlayMedia('video', e)}
+                               className="flex items-center gap-1.5 text-[10px] font-bold bg-white/20 hover:bg-white/30 text-white px-2.5 py-1.5 rounded-lg transition-colors border border-white/20"
+                             >
+                                <Video className="w-3 h-3" />
+                                Vídeo Resposta
+                             </button>
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
                           </div>
 
                           {officialResponse && (
@@ -173,6 +198,7 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
                        
                        {/* MULTIMEDIA BUTTONS (YELLOW VARIANT) */}
                        <div className="mt-3 flex gap-2">
+<<<<<<< HEAD
                            {officialResponse?.audioUrl && (
                              <button 
                                onClick={(e) => handlePlayMedia(officialResponse.audioUrl, 'audio', e)}
@@ -192,6 +218,15 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
                                   VÍDEO RESPOSTA
                                </button>
                              )}
+=======
+                           <button 
+                             onClick={(e) => handlePlayMedia('audio', e)}
+                             className="flex items-center gap-1.5 text-[10px] font-bold bg-slate-900/10 hover:bg-slate-900/20 text-slate-800 px-2.5 py-1.5 rounded-lg transition-colors"
+                           >
+                              <Play className="w-3 h-3 fill-current" />
+                              Ouvir Status
+                           </button>
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
                        </div>
 
                        <div className="mt-2 flex gap-2">

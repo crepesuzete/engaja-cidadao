@@ -1,7 +1,11 @@
 
 import React, { useState } from 'react';
 import { Councilor, LegislativeBill, BillStatus, UserRole } from '../types';
+<<<<<<< HEAD
 import { Landmark, Vote, User, ThumbsUp, ThumbsDown, FileText, ChevronRight, Mail, ArrowRight, Building2, ScrollText, CheckCircle2, XCircle, Pencil, X, Save, Plus, Lock, Trash2 } from 'lucide-react';
+=======
+import { Landmark, Vote, User, ThumbsUp, ThumbsDown, FileText, ChevronRight, Mail, ArrowRight, Building2, ScrollText, CheckCircle2, XCircle, Pencil, X, Save, Plus, Lock } from 'lucide-react';
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
 
 interface LegislativeViewProps {
   councilors: Councilor[];
@@ -11,7 +15,10 @@ interface LegislativeViewProps {
   onUpdateBill?: (bill: LegislativeBill) => void;
   onUpdateCouncilor?: (councilor: Councilor) => void;
   onAddCouncilor?: (councilor: Councilor) => void;
+<<<<<<< HEAD
   onDeleteCouncilor?: (id: string) => void; // New delete handler
+=======
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
 }
 
 const LegislativeView: React.FC<LegislativeViewProps> = ({ 
@@ -21,8 +28,12 @@ const LegislativeView: React.FC<LegislativeViewProps> = ({
   onVoteBill, 
   onUpdateBill,
   onUpdateCouncilor,
+<<<<<<< HEAD
   onAddCouncilor,
   onDeleteCouncilor
+=======
+  onAddCouncilor
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
 }) => {
   const [activeTab, setActiveTab] = useState<'BILLS' | 'COUNCILORS'>('BILLS');
   
@@ -267,8 +278,12 @@ const LegislativeView: React.FC<LegislativeViewProps> = ({
                         {canEdit && onUpdateCouncilor && (
                            <button 
                              onClick={() => setEditingCouncilor(councilor)}
+<<<<<<< HEAD
                              className="absolute top-2 right-2 p-2 bg-slate-100 text-slate-500 rounded-full hover:bg-indigo-100 hover:text-indigo-600 transition-colors"
                              title="Editar Vereador"
+=======
+                             className="absolute top-2 right-2 p-2 bg-slate-100 text-slate-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-indigo-100 hover:text-indigo-600"
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
                            >
                              <Pencil className="w-4 h-4" />
                            </button>
@@ -427,6 +442,7 @@ const LegislativeView: React.FC<LegislativeViewProps> = ({
                       <button type="submit" className="w-full py-3 bg-indigo-600 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-indigo-700">
                         <Save className="w-4 h-4" /> {editingCouncilor.id ? 'Salvar Perfil' : 'Cadastrar Vereador'}
                       </button>
+<<<<<<< HEAD
 
                       {/* DELETE BUTTON (Only if editing existing) */}
                       {editingCouncilor.id && onDeleteCouncilor && (
@@ -441,6 +457,8 @@ const LegislativeView: React.FC<LegislativeViewProps> = ({
                             <Trash2 className="w-4 h-4" /> Excluir Vereador
                          </button>
                       )}
+=======
+>>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
                   </form>
                 </div>
             </div>
