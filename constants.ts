@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
 import { Issue, IssueCategory, IssueStatus, Mission, Reward, User, UserRole, Notification, EmergencyAlert, Poll, Councilor, LegislativeBill } from './types';
 
 // Mock Notifications
@@ -198,11 +195,7 @@ export const INITIAL_ISSUES: Issue[] = [
     isAnonymous: false,
     createdAt: new Date('2023-10-25'),
     attachments: [
-<<<<<<< HEAD
         { id: 'a1', type: 'IMAGE', url: 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=500&auto=format&fit=crop&q=60', name: 'Buraco.jpg' }
-=======
-        { id: 'a1', type: 'IMAGE', url: 'https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&q=80&w=400', name: 'Buraco.jpg' }
->>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
     ],
     supportedBy: ['u1', 'u5', 'u6'],
     flaggedBy: [],
@@ -242,11 +235,7 @@ export const INITIAL_ISSUES: Issue[] = [
     isAnonymous: true, // Example of anonymous report
     createdAt: new Date('2023-10-26'),
     attachments: [
-<<<<<<< HEAD
        { id: 'a2', type: 'IMAGE', url: 'https://images.unsplash.com/photo-1555677284-6a6f971638e0?w=500&auto=format&fit=crop&q=60', name: 'Escuro.jpg' }
-=======
-       { id: 'a2', type: 'IMAGE', url: 'https://images.unsplash.com/photo-1555677284-6a6f971638e0?auto=format&fit=crop&q=80&w=400', name: 'Escuro.jpg' }
->>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
     ],
     supportedBy: [],
     flaggedBy: [],
@@ -268,11 +257,7 @@ export const INITIAL_ISSUES: Issue[] = [
     isAnonymous: false,
     createdAt: new Date('2023-10-20'),
     attachments: [
-<<<<<<< HEAD
         { id: 'a3', type: 'IMAGE', url: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=500&auto=format&fit=crop&q=60', name: 'Lixo.jpg' }
-=======
-        { id: 'a3', type: 'IMAGE', url: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&q=80&w=400', name: 'Lixo.jpg' }
->>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
     ],
     supportedBy: ['u2'],
     flaggedBy: [],
@@ -323,11 +308,7 @@ export const INITIAL_ISSUES: Issue[] = [
     isAnonymous: false,
     createdAt: new Date('2023-10-24'),
     attachments: [
-<<<<<<< HEAD
         { id: 'a4', type: 'IMAGE', url: 'https://images.unsplash.com/photo-1584697966970-cd1c92a926f6?w=500&auto=format&fit=crop&q=60', name: 'Infiltracao.jpg' }
-=======
-        { id: 'a4', type: 'IMAGE', url: 'https://images.unsplash.com/photo-1584697966970-cd1c92a926f6?auto=format&fit=crop&q=80&w=400', name: 'Infiltracao.jpg' }
->>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
     ],
     supportedBy: ['u4'],
     flaggedBy: [],
@@ -440,34 +421,20 @@ export const REWARDS: Reward[] = [
     title: '20% de Desconto na Padaria Central',
     cost: 500,
     partner: 'Padaria Central',
-<<<<<<< HEAD
     image: 'https://images.unsplash.com/photo-1555507036-ab1f40388085?auto=format&fit=crop&q=80&w=300', // Bakery
-=======
-    image: 'https://picsum.photos/300/200?random=1',
->>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
   },
   {
     id: 'r2',
     title: 'Ingresso Grátis para o Teatro',
     cost: 1000,
     partner: 'Secretaria de Cultura',
-<<<<<<< HEAD
     image: 'https://images.unsplash.com/photo-1507676184212-d03816a97f06?auto=format&fit=crop&q=80&w=300', // Theater
-=======
-    image: 'https://picsum.photos/300/200?random=2',
->>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
   },
   {
     id: 'r3',
     title: 'Vale Muda de Árvore Nativa',
     cost: 200,
     partner: 'Horto Florestal',
-<<<<<<< HEAD
     image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=300', // Tree
   }
 ];
-=======
-    image: 'https://picsum.photos/300/200?random=3',
-  }
-];
->>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
