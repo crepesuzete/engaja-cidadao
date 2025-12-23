@@ -3,6 +3,7 @@ import { UserRole, User } from '../types';
 import { Building2, UserCircle, Landmark, ArrowRight, ShieldCheck, Mail, Lock, User as UserIcon, BadgeCheck, Star, Users } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // IMAGENS DEFINIDAS PELO USUÁRIO
 const HERO_IMAGE_DESKTOP = "https://i.imgur.com/kzdVI0C.png"; // PC
 const HERO_IMAGE_MOBILE = "https://i.imgur.com/ZZEPLhN.png"; // Mobile - Foto Horizontal
@@ -12,6 +13,11 @@ const HERO_IMAGE_DESKTOP = "https://i.imgur.com/kzdVI0C.png";
 // URL da imagem de capa Mobile (Atualizada)
 const HERO_IMAGE_MOBILE = "https://i.imgur.com/ZZEPLhN.png";
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+// IMAGENS DEFINIDAS PELO USUÁRIO
+const HERO_IMAGE_DESKTOP = "https://i.imgur.com/kzdVI0C.png"; // PC
+const HERO_IMAGE_MOBILE = "https://i.imgur.com/ZZEPLhN.png"; // Mobile - Foto Horizontal
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
 
 interface AuthScreenProps {
   onLogin: (user: User) => void;
@@ -64,13 +70,18 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ onLogin }) => {
         
         {/* LADO ESQUERDO - IMAGEM HERO (POSTER) */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Mobile: h-64 define altura do banner. object-contain garante que a arte horizontal apareça inteira sem cortes. */}
 =======
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+        {/* Mobile: h-64 define altura do banner. object-contain garante que a arte horizontal apareça inteira sem cortes. */}
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
         <div className="lg:w-1/2 relative bg-white h-64 lg:h-auto shrink-0 overflow-hidden border-r border-slate-200">
            {/* IMAGEM MOBILE */}
            <img 
              src={HERO_IMAGE_MOBILE} 
+<<<<<<< HEAD
 <<<<<<< HEAD
              alt="Engaja Cidadão Capa Mobile" 
              className="absolute inset-0 w-full h-full object-contain object-center lg:hidden"
@@ -82,10 +93,15 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ onLogin }) => {
                e.currentTarget.src = HERO_IMAGE_DESKTOP;
              }}
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+             alt="Engaja Cidadão Capa Mobile" 
+             className="absolute inset-0 w-full h-full object-contain object-center lg:hidden"
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
            />
            {/* IMAGEM DESKTOP */}
            <img 
              src={HERO_IMAGE_DESKTOP} 
+<<<<<<< HEAD
 <<<<<<< HEAD
              alt="Engaja Cidadão Capa Desktop" 
              className="absolute inset-0 w-full h-full object-cover object-top hidden lg:block"
@@ -96,17 +112,25 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ onLogin }) => {
                e.currentTarget.src = "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1000&q=80";
              }}
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+             alt="Engaja Cidadão Capa Desktop" 
+             className="absolute inset-0 w-full h-full object-cover object-top hidden lg:block"
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
            />
         </div>
 
         {/* LADO DIREITO - SELEÇÃO DE PERFIL */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
         <div className="lg:w-1/2 flex flex-col items-center justify-start p-6 pt-10 lg:p-12 lg:pt-24 overflow-y-auto bg-slate-50">
           <div className="w-full max-w-md space-y-8">
             
             <div className="text-center lg:text-left">
               <h2 className="text-3xl font-black text-slate-800 tracking-tight">Bem-vindo</h2>
               <p className="text-slate-500 mt-2 text-base">Selecione seu perfil para acessar o sistema.</p>
+<<<<<<< HEAD
 =======
         <div className="lg:w-1/2 flex items-center justify-center p-6 lg:p-12 overflow-y-auto bg-slate-50">
           <div className="w-full max-w-md space-y-8">
@@ -118,6 +142,8 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ onLogin }) => {
               <h2 className="text-3xl font-black text-slate-800 tracking-tight">Bem-vindo</h2>
               <p className="text-slate-500 mt-2 text-base">Participe ativamente da melhoria da sua cidade.</p>
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
             </div>
 
             <div className="space-y-4">
@@ -291,6 +317,9 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ onLogin }) => {
                   />
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
                 {/* AUTO-FILL BUTTON FOR DEMO */}
                 <p className="text-[10px] text-slate-400 mt-1 ml-1 font-medium">
                   *Para demonstração use: 
@@ -302,9 +331,12 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ onLogin }) => {
                     1234 (Clique para preencher)
                   </button>
                 </p>
+<<<<<<< HEAD
 =======
                 <p className="text-[10px] text-slate-400 mt-1 ml-1 font-medium">*Para demonstração use: 1234</p>
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
               </div>
             </>
           )}

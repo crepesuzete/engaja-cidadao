@@ -31,6 +31,9 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
   // Updated handler to open media
   const handlePlayMedia = (url: string | undefined, type: 'audio' | 'video', e: React.MouseEvent) => {
     e.stopPropagation();
@@ -39,12 +42,15 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
     } else {
         alert(`Nenhuma mídia anexada a esta resposta.`);
     }
+<<<<<<< HEAD
 =======
   // Mock function to simulate playing media
   const handlePlayMedia = (type: 'audio' | 'video', e: React.MouseEvent) => {
     e.stopPropagation();
     alert(`Abrindo player de ${type === 'audio' ? 'áudio' : 'vídeo'}... (Funcionalidade demonstrativa)`);
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
   };
 
   if (!isOpen) {
@@ -139,6 +145,9 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
                           
                           {/* MULTIMEDIA BUTTONS */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
                           <div className="mt-3 flex gap-2 flex-wrap">
                              {officialResponse?.audioUrl && (
                                <button 
@@ -159,6 +168,7 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
                                   VER VÍDEO DO PREFEITO
                                </button>
                              )}
+<<<<<<< HEAD
 =======
                           <div className="mt-3 flex gap-2">
                              <button 
@@ -176,6 +186,8 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
                                 Vídeo Resposta
                              </button>
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
                           </div>
 
                           {officialResponse && (
@@ -199,6 +211,9 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
                        {/* MULTIMEDIA BUTTONS (YELLOW VARIANT) */}
                        <div className="mt-3 flex gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
                            {officialResponse?.audioUrl && (
                              <button 
                                onClick={(e) => handlePlayMedia(officialResponse.audioUrl, 'audio', e)}
@@ -218,6 +233,7 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
                                   VÍDEO RESPOSTA
                                </button>
                              )}
+<<<<<<< HEAD
 =======
                            <button 
                              onClick={(e) => handlePlayMedia('audio', e)}
@@ -227,6 +243,8 @@ const IssueListSidebar: React.FC<IssueListSidebarProps> = ({ issues, onSelectIss
                               Ouvir Status
                            </button>
 >>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
+=======
+>>>>>>> 0ad1214 (Atualizações gerais do EC - pasta nova)
                        </div>
 
                        <div className="mt-2 flex gap-2">
