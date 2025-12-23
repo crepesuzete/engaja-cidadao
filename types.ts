@@ -32,11 +32,8 @@ export interface Comment {
   text: string;
   createdAt: Date;
   isOfficial?: boolean; // If true, it's a city official responding
-<<<<<<< HEAD
   audioUrl?: string; // NEW: Audio response
   videoUrl?: string; // NEW: Video response
-=======
->>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
 }
 
 export interface Attachment {
@@ -195,8 +192,4 @@ export interface LegislativeBill {
     votesAgainst: number;
     userVote?: 'FAVOR' | 'AGAINST'; // Local state
   };
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c5dc7d1ae8e11d69d016bf79a6630b933d6a12bf
