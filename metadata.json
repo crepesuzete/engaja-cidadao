@@ -1,0 +1,8 @@
+{
+  "name": "Engaja Cidadão",
+  "description": "Plataforma de engajamento cívico conectando cidadãos e gestão pública através de gamificação e participação ativa.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
